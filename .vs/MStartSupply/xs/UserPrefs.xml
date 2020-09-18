@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{1D9DA9DB-734C-4EBC-88FA-AD5A560F3BA7}|Default">
   <MonoDevelop.Ide.ItemProperties.MStartSupply PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Mercadoria/Inserir.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_Layout.cshtml">
     <Files>
       <File FileName="Models/Mercadoria.cs" Line="15" Column="47" />
-      <File FileName="Models/Entrada.cs" Line="1" Column="1" />
+      <File FileName="Models/Entrada.cs" Line="19" Column="82" />
       <File FileName="Models/Saida.cs" Line="1" Column="1" />
-      <File FileName="Controllers/MercadoriaController.cs" Line="177" Column="60" />
+      <File FileName="Controllers/MercadoriaController.cs" Line="88" Column="16" />
       <File FileName="Data/MStartSupplyContext.cs" Line="1" Column="1" />
-      <File FileName="Migrations/20200915185200_Mercadoria.cs" Line="109" Column="33" />
+      <File FileName="Migrations/20200915185200_Mercadoria.cs" Line="31" Column="18" />
       <File FileName="Controllers/EntradaController.cs" Line="1" Column="1" />
       <File FileName="Views/Mercadoria/Inserir.cshtml" Line="17" Column="37" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="15" Column="93" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,12 +18,9 @@
           <Node name="MStartSupply" expanded="True">
             <Node name="MStartSupply" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Entrada" expanded="True" />
-                <Node name="Mercadoria" expanded="True">
-                  <Node name="Inserir.cshtml" selected="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
                 </Node>
               </Node>
             </Node>
