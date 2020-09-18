@@ -1,0 +1,64 @@
+﻿@model MStartSupply.Models.Saida
+
+@{
+    ViewData["Title"] = "Inserir Saida";
+}
+
+@{
+    IEnumerable<Mercadoria> mercadorias = ViewData["Mercadoria"] as IEnumerable<Mercadoria>;
+}
+
+<h1>Inserir</h1>
+
+<h4>Saida</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Inserir">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="MercadoriaID" class="control-label"></label>
+                <select asp-for="MercadoriaID" class="form-control">
+                    <option value=""> </option>
+                    @foreach (Mercadoria mercadoria in mercadorias)
+                    {
+                        <option value="@mercadoria.MercadoriaID">@mercadoria.Nome</option>
+                    }
+                </select>
+                <span asp-validation-for="MercadoriaID" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DataSaida" class="control-label"></label>
+                <input asp-for="DataSaida" class="form-control" />
+                <span asp-validation-for="DataSaida" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LocalSaida" class="control-label"></label>
+                <input asp-for="LocalSaida" class="form-control" />
+                <span asp-validation-for="LocalSaida" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

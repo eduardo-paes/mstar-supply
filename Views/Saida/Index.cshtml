@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MStartSupply.Models.Saida>
+
+@{
+    ViewData["Title"] = "Saida";
+}
+
+<h2>Lista de Saidas</h2>
+
+<p>
+    <a asp-action="Inserir">Inserir Saida</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SaidaID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MercadoriaID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaidaID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSaida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalSaida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MercadoriaID)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.SaidaID">Editar</a> |
+                <a asp-action="Detalhes" asp-route-id="@item.SaidaID">Detalhes</a> |
+                <a asp-action="Remover" asp-route-id="@item.SaidaID">Remover</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
